@@ -1,0 +1,37 @@
+﻿@model WebApplication4.Models.TrainVM
+@using WebApplication4.Models
+@{
+    ViewData["Title"] = "FindTrains";
+}
+<h1>Find </h1>
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>TrainID</th>
+            <th>StationName</th>
+            <th>Time</th>
+
+
+        </tr>
+        @{
+            if (Model.Find != null && Model.Find.Count > 0)
+            {
+                foreach (var item in Model.Find)
+                {
+                    <tr>
+                        <td>@item.TrainName</td>
+                        <td>@item.StationName</td>
+                        <td>@item.Arrival_time</td>
+
+
+
+                    </tr>
+                }
+            }
+
+
+
+        }
+    </table>
+
+</div>

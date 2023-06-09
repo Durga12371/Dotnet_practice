@@ -1,0 +1,43 @@
+﻿@model WebApplication4.Models.TrainVM
+@using WebApplication4.Models
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Find</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="get" asp-area="" asp-controller="Train" asp-action="Find">
+
+                <div class="row mb-03">
+                    <div class="col-12"><label for="StationName">StationName</label></div>
+                    <div class="col-12"><input type="text" class="form-control" name="StationName" id="StationName" placeholder="Enter Name" /> </div>
+                </div>
+                <div class="row mb-03">
+                    <div class="col-12"><label for="From_Time">From_Time</label></div>
+                    <div class="col-12"><input type="time" class="form-control" name="From_Time" id="From_Time" placeholder="Enter Name" /> </div>
+                </div>
+                <div class="row mb-03">
+                    <div class="col-12"><label for="To_Time">To_Time</label></div>
+                    <div class="col-12"><input type="time" class="form-control" name="To_Time" id="To_Time" placeholder="Enter Name" /> </div>
+                </div>
+                <div class="row mb-03">
+                    <div class="col-12"><label for="Date">Date</label></div>
+                    <div class="col-12"><input type="date" class="form-control" name="Date" id="Date" placeholder="Enter Name" /> </div>
+                </div>
+
+                <div class="row mb-03">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>

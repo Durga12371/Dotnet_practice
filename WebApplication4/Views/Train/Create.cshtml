@@ -1,0 +1,46 @@
+﻿@model WebApplication4.Models.TrainVM
+@using WebApplication4.Models
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Create</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-area="" asp-controller="Train" asp-action="Create">
+                <div class="row mb-03">
+                    <div class="col-12"><label for="TrainID">TrainID</label></div>
+                    <div class="col-12"><input type="text" class="form-control" name="TrainID" id="TrainID" placeholder="Enter Name" /> </div>
+                </div>
+                <div class="row mb-03">
+                    <div class="col-12"><label for="TrainName">Train Name</label></div>
+                    <div class="col-12"><input type="text" class="form-control" name="TrainName" id="TrainName" placeholder="Enter Name" /> </div>
+                </div>
+                <div class="row mb-03">
+                    <div class="col-12"><label for="Source_Station_Id">Source_Station_Id</label></div>
+                    <div class="col-12"><input type="text" class="form-control" name="Source_Station_Id" id="Source_Station_Id" placeholder="Enter Name" /> </div>
+                </div>
+                <div class="row mb-03">
+                    <div class="col-12"><label for="Destination_Station_Id">Destination_Station_Id</label></div>
+                    <div class="col-12"><input type="text" class="form-control" name="Destination_Station_Id" id="Destination_Station_Id" placeholder="Enter Name" /> </div>
+                </div>
+
+                <div class="row mb-03">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+
+                </div>
+
+
+             </form>
+
+
+
+        </div>
+
+    </div>
+    <div>
+        <a asp-action="TrainsDetails">Back to List</a>
+    </div>
+</div>

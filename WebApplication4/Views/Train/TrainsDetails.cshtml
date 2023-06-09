@@ -1,0 +1,42 @@
+﻿@model WebApplication4.Models.TrainVM
+@using WebApplication4.Models
+@{
+    ViewData["Title"] = "TrainsDetails";
+}
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<h1>Trains Details </h1>
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>TrainID</th>
+            <th>TrainName</th>
+            <th>Source_Station_Id</th>
+            <th>Destination_Station_I</th>
+
+
+        </tr>
+        @{
+            if (Model.TrainsDetails != null && Model.TrainsDetails.Count > 0)
+            {
+                foreach (var item in Model.TrainsDetails)
+                {
+                    <tr>
+                        <td>@item.TrainName</td>
+                        <td>@item.TrainID</td>
+                        <td>@item.Source_Station_Id</td>
+                        <td>@item.Destination_Station_Id</td>
+
+
+
+                    </tr>
+                }
+            }
+
+
+
+        }
+    </table>
+
+</div>
